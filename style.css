@@ -395,3 +395,30 @@ a .socialite-link-color-email:hover {
     background-color: #ab7b2c;
     border-color: #ab7b2c;
 }
+
+
+/* Diaspora */
+.socialite-item-name-diaspora {
+    background-image: url("images/diaspora.ico");
+}
+
+.socialite-link-icon-diaspora{
+    content:url("images/diaspora.ico");
+}
+
+.socialite-link-name-diaspora,
+.socialite-link-icon-diaspora,
+.socialite-link-color-diaspora {
+    border-color: #666;
+}
+
+.socialite-link-color-diaspora {
+    background-color: #666;
+}
+
+.socialite-link-color-diaspora:hover,
+a .socialite-link-color-diaspora:hover {
+    background-color: #415c78;
+    border-color: #415c78;
+}
+
