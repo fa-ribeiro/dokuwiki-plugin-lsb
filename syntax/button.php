@@ -4,6 +4,8 @@
  *
  * @license GPL 2 http://www.gnu.org/licenses/gpl-2.0.html
  * @author  Fernando Ribeiro <pinguim.ribeiro@gmail.com>
+ *
+ * diaspora network added by dranjor
  */
 
 // must be run within Dokuwiki
@@ -82,7 +84,7 @@ class syntax_plugin_socialite_button extends DokuWiki_Syntax_Plugin {
         // validation list of available display modes
         $valid_displays = array('name', 'icon', 'color');
         // validation list of available social networks
-        $valid_networks = array('twitter', 'facebook', 'googleplus',
+        $valid_networks = array('diaspora', 'twitter', 'facebook', 'googleplus',
                                 'linkedin', 'pinterest', 'tumblr',
                                 'reddit', 'taringa', 'delicious',
                                 'stumbleupon', 'xing', 'vk', 'email');
@@ -124,8 +126,13 @@ class syntax_plugin_socialite_button extends DokuWiki_Syntax_Plugin {
         // see: https://github.com/cferdinandi/social-sharing
         // see: https://github.com/bradvin/social-share-urls
         // see: http://brandcolors.net/
+		// see: https://sharetodiaspora.github.io/
 
         switch ($network) {
+	        case 'diaspora':
+                $name = 'Diaspora';
+                $href = 'http://sharetodiaspora.github.io/?url='. $url . '&title=' .$title;
+                break;
             case 'twitter':
                 $name = 'Twitter';
                 $href = 'https://twitter.com/intent/tweet?url=' . $url . '&text='. $title;
@@ -183,7 +190,7 @@ class syntax_plugin_socialite_button extends DokuWiki_Syntax_Plugin {
         }
 
         $xhtml  = '<li class="socialite-item-' . $class . '">';
-        $xhtml .= '<a class="socialite-link-' . $class . '" href="' . $href . '">' . $name . '</a>';
+        $xhtml .= '<a class="socialite-link-' . $class . '" href="' . $href . '" target=_blank ">' . $name . '</a>';
         $xhtml .= '</li>';
 
         return $xhtml;

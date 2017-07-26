@@ -8,7 +8,7 @@
 //$conf['fixme']    = 'FIXME';
 
 
-$conf['networks']           = 'twitter facebook googleplus linkedin pinterest tumblr reddit taringa delicious stumbleupon xing vk email';
+$conf['networks']           = 'diaspora twitter facebook googleplus linkedin pinterest tumblr reddit taringa delicious stumbleupon xing vk email';
 
 $conf['display']            = 'color';
 
