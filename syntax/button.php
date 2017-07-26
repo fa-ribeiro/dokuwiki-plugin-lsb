@@ -190,7 +190,7 @@ class syntax_plugin_socialite_button extends DokuWiki_Syntax_Plugin {
         }
 
         $xhtml  = '<li class="socialite-item-' . $class . '">';
-        $xhtml .= '<a class="socialite-link-' . $class . '" href="' . $href . '">' . $name . '</a>';
+        $xhtml .= '<a class="socialite-link-' . $class . '" href="' . $href . '" target=_blank ">' . $name . '</a>';
         $xhtml .= '</li>';
 
         return $xhtml;
