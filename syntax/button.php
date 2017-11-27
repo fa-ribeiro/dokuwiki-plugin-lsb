@@ -85,7 +85,7 @@ class syntax_plugin_socialite_button extends DokuWiki_Syntax_Plugin {
         $valid_networks = array('twitter', 'facebook', 'googleplus',
                                 'linkedin', 'pinterest', 'tumblr',
                                 'reddit', 'taringa', 'delicious',
-                                'stumbleupon', 'xing', 'vk', 'email');
+                                'stumbleupon', 'xing', 'vk', 'email', 'hatenabookmark');
 
         if (in_array($data['display'], $valid_displays)) {
             $display = $data['display'];
@@ -174,12 +174,16 @@ class syntax_plugin_socialite_button extends DokuWiki_Syntax_Plugin {
                 $name = 'Email';
                 $href = 'mailto:?subject='. $title .'&body=' . $url . ': '. $abstract;
                 break;
+            case 'hatenabookmark':
+                $name  = 'Hatena';
+                $href  = 'http://b.hatena.ne.jp/entry/' . $url;
+                break;
         }
 
         $xhtml  = '<li class="' . $display . '">';
         $xhtml .= '<a class="' . $network . '" href="' . $href . '">' . $name . '</a>';
         $xhtml .= '</li>';
-
+        
         return $xhtml;
     }
 

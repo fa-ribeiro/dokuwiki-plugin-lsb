@@ -267,3 +267,29 @@
 .socialite li.color .email {
     background-color: #673147;
 }
+
+
+/* HatenaBookmark */
+.socialite-item-name-hatenabookmark {
+    background-image: url("images/hatenabookmark.ico");
+}
+
+.socialite-link-icon-hatenabookmark{
+    content:url("images/hatenabookmark.ico");
+}
+
+.socialite-link-name-hatenabookmark,
+.socialite-link-icon-hatenabookmark,
+.socialite-link-color-hatenabookmark {
+    border-color: #0086DE;
+}
+
+.socialite-link-color-hatenabookmark {
+    background-color: #0086DE;
+}
+
+.socialite-link-color-hatenabookmark:hover,
+a .socialite-link-color-hatenabookmark:hover {
+    background-color: #4d91c9;
+    border-color: #4d91c9;
+}
